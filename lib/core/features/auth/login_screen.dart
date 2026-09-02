@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:plateful/core/features/auth/components/background_image.dart';
 import 'package:plateful/core/features/auth/components/text_on_background.dart';
+import 'package:plateful/core/features/auth/register_screen.dart';
+import 'package:plateful/core/features/home/home_screen.dart';
 import 'package:plateful/core/widgets/Custom_elevated_button.dart';
 import 'package:plateful/core/widgets/custom_text_bottom.dart';
 import 'package:plateful/core/widgets/custom_text_form_filed.dart';
@@ -26,7 +28,7 @@ class LoginScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     Spacer(),
-                    TextOnBackground(beforeNow:"Sign in",),
+                    TextOnBackground(beforeNow: "Sign in"),
                     CustomTextFormFiled(
                       controller: emailController,
                       prefixIcon: Icons.email_outlined,
@@ -37,7 +39,19 @@ class LoginScreen extends StatelessWidget {
                       prefixIcon: Icons.lock_outline,
                       hintText: "Password",
                     ),
-                    CustomElevatedButton(text: "SIGN IN", onPressed: () {}),
+                    CustomElevatedButton(
+                      text: "SIGN IN",
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (BuildContext context) {
+                              return HomeScreen();
+                            },
+                          ),
+                        );
+                      },
+                    ),
                     SizedBox(height: 24),
                     Padding(
                       padding: const EdgeInsets.only(bottom: 58),
@@ -45,7 +59,7 @@ class LoginScreen extends StatelessWidget {
                         mainAxisAlignment: .center,
                         children: [
                           Text(
-                            "Already have an account?  ",
+                            "Don't have an account?  ",
                             style: TextStyle(
                               fontFamily: 'NotoSans',
                               fontSize: 14,
@@ -53,7 +67,19 @@ class LoginScreen extends StatelessWidget {
                               color: Colors.grey,
                             ),
                           ),
-                          CustomTextBottom(text: "Join Us", onPressed: () {}),
+                          CustomTextBottom(
+                            text: "Join Us",
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (BuildContext context) {
+                                    return RegisterScreen();
+                                  },
+                                ),
+                              );
+                            },
+                          ),
                         ],
                       ),
                     ),

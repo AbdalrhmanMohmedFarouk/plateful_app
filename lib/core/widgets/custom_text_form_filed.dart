@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CustomTextFormFiled extends StatelessWidget {
-  CustomTextFormFiled({
+class CustomTextFormFiled extends StatefulWidget {
+  const CustomTextFormFiled({
     super.key,
     required this.controller,
     this.errorMessage = "Please enter your email or Password",
@@ -20,14 +20,19 @@ class CustomTextFormFiled extends StatelessWidget {
   final double sizedBoxHeight;
 
   @override
+  State<CustomTextFormFiled> createState() => _CustomTextFormFiledState();
+}
+
+class _CustomTextFormFiledState extends State<CustomTextFormFiled> {
+  @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         TextFormField(
-          controller: controller,
+          controller: widget.controller,
           validator: (value) {
             if (value == null || value.isEmpty) {
-              return errorMessage;
+              return widget.errorMessage;
             }
             return null;
           },
@@ -38,8 +43,8 @@ class CustomTextFormFiled extends StatelessWidget {
             color: Colors.white,
           ),
           decoration: InputDecoration(
-            prefixIcon: Icon(prefixIcon, color: Colors.white),
-            hintText: hintText,
+            prefixIcon: Icon(widget.prefixIcon, color: Colors.white),
+            hintText: widget.hintText,
             hintStyle: TextStyle(
               fontFamily: 'NotoSans',
               fontSize: 13,
@@ -62,7 +67,7 @@ class CustomTextFormFiled extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: sizedBoxHeight),
+        SizedBox(height: widget.sizedBoxHeight),
       ],
     );
   }
