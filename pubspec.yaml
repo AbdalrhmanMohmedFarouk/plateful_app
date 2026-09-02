@@ -88,6 +88,9 @@ flutter:
      - family: CormorantInfant
        fonts:
          - asset: assets/fonts/CormorantInfant-VariableFont_wght.ttf
+     - family: Hurricane
+       fonts:
+         - asset: assets/fonts/Hurricane-Regular.ttf
 
 
   # For details regarding fonts from package dependencies,

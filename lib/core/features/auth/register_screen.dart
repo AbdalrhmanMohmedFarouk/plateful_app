@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:plateful/core/features/auth/components/text_on_background.dart';
-import 'package:plateful/core/features/auth/login_screen.dart';
 import 'package:plateful/core/features/home/home_screen.dart';
+import 'package:plateful/core/features/main/main_screen.dart';
 import 'package:plateful/core/widgets/Custom_elevated_button.dart';
 import 'package:plateful/core/widgets/custom_text_bottom.dart';
 import 'package:plateful/core/widgets/custom_text_form_filed.dart';
@@ -74,7 +74,7 @@ class RegisterScreen extends StatelessWidget {
                                 context,
                                 MaterialPageRoute(
                                   builder: (BuildContext context) {
-                                    return LoginScreen();
+                                    return MainScreen();
                                   },
                                 ),
                               );
