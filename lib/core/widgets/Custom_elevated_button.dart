@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class CustomElevatedButton extends StatelessWidget {
-  CustomElevatedButton({
+  const CustomElevatedButton({
     super.key,
     required this.text,
     required this.onPressed,
@@ -12,7 +12,7 @@ class CustomElevatedButton extends StatelessWidget {
     this.textColor = const Color(0xFFFFFFFF),
     this.backgroundColor = Colors.black,
     this.foregroundColor = Colors.white,
-    this.borderRadius = 10,
+    this.borderRadius = 24,
     this.borderRadiusColor = const Color(0xFFFFFFFF),
     this.borderRadiusWidth = 1,
   });
