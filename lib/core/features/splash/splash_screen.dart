@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:plateful/core/features/auth/login_screen.dart';
+import 'package:plateful/core/features/auth/authentication_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -13,21 +13,18 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    Future.delayed(
-      const Duration(seconds: 3),
-          () {
-        if (!mounted) return;
+    Future.delayed(Duration(seconds: 3), () {
+      if (!mounted) return;
 
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (BuildContext context) {
-              return LoginScreen();
-            },
-          ),
-        );
-      },
-    );
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (BuildContext context) {
+            return AuthenticationScreen();
+          },
+        ),
+      );
+    });
   }
 
   @override
@@ -44,7 +41,6 @@ class _SplashScreenState extends State<SplashScreen> {
                 colorBlendMode: BlendMode.saturation,
               ),
             ),
-
             Center(
               child: Image.asset(
                 "assets/splash/burger.png",
@@ -52,14 +48,12 @@ class _SplashScreenState extends State<SplashScreen> {
                 height: 400,
               ),
             ),
-
             Center(
               child: Padding(
                 padding: const EdgeInsets.only(bottom: 41),
                 child: Column(
                   children: [
                     Spacer(),
-
                     Text(
                       "Plateful",
                       style: TextStyle(
