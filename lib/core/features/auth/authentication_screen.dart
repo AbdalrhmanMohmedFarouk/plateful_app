@@ -21,7 +21,7 @@ class AuthenticationScreen extends StatelessWidget {
                 TextOnBackground(),
                 CustomElevatedButton(
                   text: "Continue with Google",
-                  svgIcon: "assets/svg/google.svg",
+                  svgIcon: "assets/svg/google_icon.svg",
                   textColor: Colors.grey,
                   backgroundColor: Colors.white,
                   foregroundColor: Colors.black,

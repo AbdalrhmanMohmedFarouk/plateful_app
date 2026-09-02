@@ -41,7 +41,6 @@ class _MainScreenState extends State<MainScreen> {
             _currentIndex = index;
           });
         },
-
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
