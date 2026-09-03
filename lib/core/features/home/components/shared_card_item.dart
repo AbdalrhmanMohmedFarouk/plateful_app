@@ -9,7 +9,7 @@ class SharedCardItem extends StatelessWidget {
     this.heightOfImage = 261,
     required this.nameOfPalte,
     required this.categoryOfPlate,
-    required this.countryPalte,
+    this.countryPalte,
     this.numberOfIngredients,
   });
 
@@ -19,7 +19,7 @@ class SharedCardItem extends StatelessWidget {
   final double? heightOfImage;
   final String nameOfPalte;
   final String categoryOfPlate;
-  final String countryPalte;
+  final String? countryPalte;
   final int? numberOfIngredients;
 
   @override
@@ -81,28 +81,28 @@ class SharedCardItem extends StatelessWidget {
                 nameOfPalte,
                 style: TextStyle(
                   fontFamily: 'NotoSans',
-                  fontSize: 18,
+                  fontSize: width == 315 ? 18 : 14 ,
                   fontWeight: FontWeight.w500,
                   color: Color(0xFF1E1E1E),
                 ),
               ),
               numberOfIngredients == null
                   ? Text(
-                      countryPalte,
+                      countryPalte!,
                       style: TextStyle(
                         fontFamily: 'NotoSans',
-                        fontSize: 13,
-                        fontWeight: FontWeight.w300,
-                        color: Color(0xFF1E1E1E),
+                        fontSize: width == 315 ? 13 : 12 ,
+                        fontWeight: width == 315 ? FontWeight.w300:FontWeight.w200,
+                        color: width == 315 ? Color(0xFF1E1E1E):Color(0xFF878787),
                       ),
                     )
                   : Text(
                       "$numberOfIngredients Ingredients",
                       style: TextStyle(
                         fontFamily: 'NotoSans',
-                        fontSize: 13,
-                        fontWeight: FontWeight.w300,
-                        color: Color(0xFF1E1E1E),
+                        fontSize: width == 315 ? 13 : 12,
+                        fontWeight: width == 315 ? FontWeight.w300:FontWeight.w200,
+                        color: width == 315 ? Color(0xFF1E1E1E):Color(0xFF878787),
                       ),
                     ),
             ],
