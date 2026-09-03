@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plateful/core/features/details/details_screen.dart';
 import 'package:plateful/core/features/home/components/Custom_lagre_item.dart';
 import 'package:plateful/core/features/home/components/Custom_title.dart';
 import 'package:plateful/core/features/home/components/shared_card_item.dart';
@@ -43,11 +44,23 @@ class HomeScreen extends StatelessWidget {
                     details: "Picked for you today",
                   ),
                   SizedBox(height: 16),
-                  SharedCardItem(
-                    imagePath: "assets/images/meal_1.png",
-                    nameOfPalte: 'Spicy Arrabiata Penne',
-                    categoryOfPlate: 'Vegetarian',
-                    countryPalte: 'Italian',
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) {
+                            return DetailsScreen();
+                          },
+                        ),
+                      );
+                    },
+                    child: SharedCardItem(
+                      imagePath: "assets/images/meal_1.png",
+                      nameOfPalte: 'Spicy Arrabiata Penne',
+                      categoryOfPlate: 'Vegetarian',
+                      countryPalte: 'Italian',
+                    ),
                   ),
                   SizedBox(height: 16),
                   CustomTitle(text: "Greek", details: "Suggested cuisine"),
@@ -90,7 +103,10 @@ class HomeScreen extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 8),
-                    child: CustomTitle(text: "Meal to Prepare", details: "Today from your calendar"),
+                    child: CustomTitle(
+                      text: "Meal to Prepare",
+                      details: "Today from your calendar",
+                    ),
                   ),
                   SharedCardItem(
                     imagePath: "assets/images/meal_1.png",
