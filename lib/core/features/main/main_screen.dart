@@ -32,9 +32,12 @@ class _MainScreenState extends State<MainScreen> {
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.white,
         currentIndex: _currentIndex,
+        type: BottomNavigationBarType.fixed,
 
-        selectedItemColor: Color(0xFF7E8287),
-        unselectedItemColor: Color(0xFF5B6169),
+        elevation: 8,
+
+        selectedItemColor: Color(0xFF5B6169),
+        unselectedItemColor: Color(0xFF7E8287),
 
         onTap: (int index) {
           setState(() {
@@ -42,14 +45,8 @@ class _MainScreenState extends State<MainScreen> {
           });
         },
         items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Home",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: "Search",
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
           BottomNavigationBarItem(
             icon: Icon(Icons.travel_explore),
             label: "Explore",
@@ -67,4 +64,3 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 }
-
