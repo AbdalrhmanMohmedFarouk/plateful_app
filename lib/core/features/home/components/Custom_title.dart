@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CustomTitle extends StatelessWidget {
-  const CustomTitle({super.key, required this.text, required this.details});
+  const CustomTitle({super.key, required this.text,  this.details});
 final String text;
-final String details;
+final String? details;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -18,15 +18,16 @@ final String details;
             color: Color(0xFF232323),
           ),
         ),
-        Text(
-          details,
-          style: TextStyle(
-            fontFamily: 'NotoSans',
-            fontSize: 16,
-            fontWeight: FontWeight.w300,
-            color: Color(0xFF232323),
+        if (details != null)
+          Text(
+            details!,
+            style: TextStyle(
+              fontFamily: 'NotoSans',
+              fontSize: 16,
+              fontWeight: FontWeight.w300,
+              color: Color(0xFF232323),
+            ),
           ),
-        ),
       ],
     );
   }

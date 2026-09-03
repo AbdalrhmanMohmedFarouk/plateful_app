@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plateful/core/features/home/components/Custom_title.dart';
 
 class DetailsImage extends StatefulWidget {
   const DetailsImage({
@@ -76,7 +77,7 @@ class _DetailsImageState extends State<DetailsImage> {
               ),
               Positioned(
                 bottom: 28,
-                right: 24,
+                right: 110,
                 child: Container(
                   decoration: BoxDecoration(
                     shape: BoxShape.rectangle,
@@ -126,6 +127,8 @@ class _DetailsImageState extends State<DetailsImage> {
             ],
           ),
         ),
+        CustomTitle(text: "Video"),
+
       ],
     );
   }

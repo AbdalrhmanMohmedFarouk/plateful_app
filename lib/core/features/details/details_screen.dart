@@ -32,27 +32,32 @@ class DetailsScreen extends StatelessWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: .start,
+          padding: const EdgeInsets.only(left: 16.0),
+          child: ListView(
             children: [
-              CustomTitle(
-                text: 'Spicy Arrabiata Penne',
-                details: 'From your calendar',
-              ),
-              SizedBox(height: 8),
-              DetailsImage(
-                imagePath: "assets/images/meal_1.png",
-                categoryOfPlate: "Chicken",
-                countryName: "Japanese",
-              ),
-              IngredientsList(
-                ingredients: [
-                  "penne rigate:1 pound",
-                  "olive oil:1/4 cup",
-                  "garlic:3 cloves",
-                  "chopped tomatoes:1 tin",
-                  "red chilli flakes:1/2 teaspoon",
+              Column(
+                crossAxisAlignment: .start,
+                children: [
+                  CustomTitle(
+                    text: 'Spicy Arrabiata Penne',
+                    details: 'From your calendar',
+                  ),
+                  SizedBox(height: 8),
+                  DetailsImage(
+                    imagePath: "assets/images/meal_1.png",
+                    categoryOfPlate: "Chicken",
+                    countryName: "Japanese",
+                  ),
+                  IngredientsList(
+                    ingredients: [
+                      "penne rigate:1 pound",
+                      "olive oil:1/4 cup",
+                      "garlic:3 cloves",
+                      "chopped tomatoes:1 tin",
+                      "red chilli flakes:1/2 teaspoon",
+                    ],
+                  ),
+
                 ],
               ),
             ],
