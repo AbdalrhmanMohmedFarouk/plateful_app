@@ -32,7 +32,6 @@ class SearchInputCard extends StatelessWidget {
       ),
       child: Column(
         children: [
-          // Input row
           Row(
             children: [
               if (isSearching)
@@ -75,7 +74,6 @@ class SearchInputCard extends StatelessWidget {
             ],
           ),
 
-          // Suggestions & categories (visible while typing)
           if (isSearching) ...[
             const Divider(height: 0.5, thickness: 0.5, color: Color(0xFFCAC4D0)),
             ...suggestions.asMap().entries.map((entry) => SuggestionItem(
