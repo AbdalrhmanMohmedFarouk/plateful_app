@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plateful/core/features/search/components/custom_container.dart';
 
 class SearchScreen extends StatelessWidget {
   SearchScreen({super.key});
@@ -68,7 +69,31 @@ class SearchScreen extends StatelessWidget {
               SizedBox(height: 16),
               Row(
                 children: [
-
+                  CustomContainer(text: "Greek", icon: Icons.search),
+                  SizedBox(width:8 ,),
+                  CustomContainer(text: "Italian", icon: Icons.search),
+                  SizedBox(width:8 ,),
+                  CustomContainer(text: "Chicken", icon: Icons.search),
+                ],
+              ),
+              SizedBox(height: 32,),
+              Text(
+                "Popular Searches",
+                style: TextStyle(
+                  fontFamily: 'NotoSans',
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                  color: Color(0xFF000000),
+                ),
+              ),
+              SizedBox(height: 16),
+              Row(
+                children: [
+                  CustomContainer(text: "Greek", icon: Icons.trending_up),
+                  SizedBox(width:8 ,),
+                  CustomContainer(text: "Chicken", icon: Icons.trending_up),
+                  SizedBox(width:8 ,),
+                  CustomContainer(text: "Beef", icon: Icons.trending_up),
                 ],
               ),
             ],
