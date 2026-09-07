@@ -57,7 +57,6 @@ class DetailsScreen extends StatelessWidget {
                       "red chilli flakes:1/2 teaspoon",
                     ],
                   ),
-
                 ],
               ),
             ],

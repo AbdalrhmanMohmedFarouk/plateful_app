@@ -38,7 +38,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 'assets/splash/backGround.png',
                 fit: BoxFit.cover,
                 color: Colors.grey,
-                colorBlendMode: BlendMode.saturation,
+                colorBlendMode: BlendMode.saturation,//ask Chatgpt
               ),
             ),
             Center(
