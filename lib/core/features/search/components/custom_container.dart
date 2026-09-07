@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class CustomContainer extends StatelessWidget {
-  const CustomContainer ({super.key, required this.text, required this.icon});
+  const CustomContainer({
+    super.key,
+    required this.text,
+    required this.icon,
+  });
 
   final String text;
   final IconData icon;
@@ -19,19 +23,19 @@ class CustomContainer extends StatelessWidget {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(8,6,16,6),
+        padding: const EdgeInsets.fromLTRB(8, 6, 16, 6),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-             Icon(
+            Icon(
               icon,
               size: 18,
-              color: Color(0xFF65558F),
+              color: const Color(0xFF65558F),
             ),
             const SizedBox(width: 8),
-             Text(
+            Text(
               text,
-              style: TextStyle(
+              style: const TextStyle(
                 fontFamily: 'NotoSans',
                 fontSize: 14,
                 fontWeight: FontWeight.w500,
