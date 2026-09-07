@@ -3,6 +3,7 @@ import 'package:plateful/core/features/calendar/calendar_screen.dart';
 import 'package:plateful/core/features/explore/explore_screen.dart';
 import 'package:plateful/core/features/favorites/favorites_screen.dart';
 import 'package:plateful/core/features/home/home_screen.dart';
+import 'package:plateful/core/features/homeM/presentation/view/home_view.dart';
 import 'package:plateful/core/features/search/search_screen.dart';
 
 class MainScreen extends StatefulWidget {

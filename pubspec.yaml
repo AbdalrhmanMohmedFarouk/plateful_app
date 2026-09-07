@@ -65,6 +65,13 @@ flutter:
      - assets/images/
      - assets/splash/
      - assets/svg/
+     - assetsM/categories/
+     - assetsM/auth/
+     - assetsM/images/
+     - assetsM/splash/
+     - assetsM/logo/
+     - assetsM/icons/
+     - assetsM/font/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

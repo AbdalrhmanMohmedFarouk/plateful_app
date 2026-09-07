@@ -5,44 +5,45 @@ class CustomContainer extends StatelessWidget {
     super.key,
     required this.text,
     required this.icon,
+    this.onTap,
   });
 
   final String text;
   final IconData icon;
+  final VoidCallback? onTap; // optional — مش كل chip محتاجة تكون tappable
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 32,
-      decoration: BoxDecoration(
-        color: const Color(0xFFFCFCFC),
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(
-          color: const Color(0xFFCAC4D0),
-          width: 1,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        height: 32,
+        decoration: BoxDecoration(
+          color: const Color(0xFFFCFCFC),
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(
+            color: const Color(0xFFCAC4D0),
+            width: 1,
+          ),
         ),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(8, 6, 16, 6),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(
-              icon,
-              size: 18,
-              color: const Color(0xFF65558F),
-            ),
-            const SizedBox(width: 8),
-            Text(
-              text,
-              style: const TextStyle(
-                fontFamily: 'NotoSans',
-                fontSize: 14,
-                fontWeight: FontWeight.w500,
-                color: Color(0xFF49454F),
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(8, 6, 16, 6),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(icon, size: 18, color: const Color(0xFF65558F)),
+              const SizedBox(width: 8),
+              Text(
+                text,
+                style: const TextStyle(
+                  fontFamily: 'NotoSans',
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                  color: Color(0xFF49454F),
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
